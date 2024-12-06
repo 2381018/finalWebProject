@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Account Log In - HoYoverse</title>
+    <style>
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .animate-slide {
+            animation: slide 20s linear infinite;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col bg-gradient-to-br from-white via-blue-100 to-purple-100 font-sans">
+    <div class="container mx-auto max-w-6xl px-5 text-center">
+        <!-- Navigation Links -->
+        <div class="flex justify-center gap-8 my-4">
+            <a href="biodata.html" class="text-blue-500 hover:text-blue-700 font-medium">Biodata Page</a>
+            <a href="contact_us.html" class="text-blue-500 hover:text-blue-700 font-medium">Contact Us Page</a>
+            <a href="posts.html" class="text-blue-500 hover:text-blue-700 font-medium">Additional Page</a>
+            <a href="freepage.html" class="text-blue-500 hover:text-blue-700 font-medium">Free Content Page</a>
+        </div>
+
+        <!-- Title Section -->
+        <div class="my-10">
+            <h1 class="text-4xl font-medium text-gray-800">
+                One <span class="text-blue-500">Account</span> for all
+            </h1>
+            <p class="text-4xl font-medium text-gray-800">your HoYoverse needs</p>
+        </div>
+
+        <!-- Login Button -->
+        <button id="openModal" class="bg-blue-500 text-white px-6 py-3 rounded-md font-medium my-5">Log In →</button>
+
+        <!-- Features Section -->
+        <div class="flex justify-center gap-8 my-10 px-5">
+            <div class="bg-white/90 p-8 rounded-2xl shadow-md max-w-xs text-left backdrop-blur-sm">
+                <img src="universal.58e2a972.png" alt="General icon" class="w-12 h-12 mb-4">
+                <h3 class="text-blue-500 text-xl font-bold mb-2">General</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    You can use a HoYoverse Account to play games on any mobile device, tablet, or computer.
+                </p>
+            </div>
+            <div class="bg-white/90 p-8 rounded-2xl shadow-md max-w-xs text-left backdrop-blur-sm">
+                <img src="manage.ad301a09.png" alt="Manage icon" class="w-12 h-12 mb-4">
+                <h3 class="text-blue-500 text-xl font-bold mb-2">Manage</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    Manage your account here securely, such as by changing your password or linked email address.
+                </p>
+            </div>
+            <div class="bg-white/90 p-8 rounded-2xl shadow-md max-w-xs text-left backdrop-blur-sm">
+                <img src="default-light.a522b00d.png" alt="Connect icon" class="w-12 h-12 mb-4">
+                <h3 class="text-blue-500 text-xl font-bold mb-2">Connect</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    Stay connected with the community, get rewards, and receive event updates.
+                </p>
+            </div>
+        </div>
+
+        <!-- Games Section -->
+        <div class="my-16">
+            <h2 class="text-2xl text-gray-800 mb-8">Our Games</h2>
+            <div class="overflow-hidden whitespace-nowrap">
+                <div class="inline-block animate-slide">
+                    <img src="HI3-logo.png" alt="Honkai Impact 3rd" class="inline-block h-10 mx-7 opacity-70 hover:opacity-100">
+                    <img src="Genshin-logo.png" alt="Genshin Impact" class="inline-block h-10 mx-7 opacity-70 hover:opacity-100">
+                    <img src="ZZZ-logo.png" alt="Zenless Zone Zero" class="inline-block h-10 mx-7 opacity-70 hover:opacity-100">
+                    <img src="Starrail-logo.png" alt="Honkai Star Rail" class="inline-block h-10 mx-7 opacity-70 hover:opacity-100">
+                    <img src="Tears-Of-Themis-logo.png" alt="Tears Of Themis" class="inline-block h-10 mx-7 opacity-70 hover:opacity-100">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center px-5">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <img src="hoyoverse.png" alt="HoYoverse Logo" class="h-6 mr-2">
+                <span class="text-sm text-gray-400">HoYoverse</span>
+            </div>
+
+            <!-- Links -->
+            <div class="flex gap-6 text-sm">
+                <a href="#" class="text-gray-400 hover:text-white">About</a>
+                <a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
+                <a href="#" class="text-gray-400 hover:text-white">Help Center</a>
+                <a href="#" class="text-gray-400 hover:text-white">Terms of Service</a>
+                <a href="#" class="text-gray-400 hover:text-white">Cookie Preferences</a>
+                <a href="#" class="text-gray-400 hover:text-white">FTI UNAI</a>
+                <a href="#" class="text-gray-400 hover:text-white">UNAI</a>
+                <a href="#" class="text-gray-400 hover:text-white">Telka</a>
+            </div>
+
+            <!-- Language Selector -->
+            <div class="relative">
+                <select class="bg-gray-800 text-white text-sm px-3 py-1 rounded-md appearance-none">
+                    <option value="en">English</option>
+                    <option value="id">Bahasa Indonesia</option>
+                    <option value="es">Español</option>
+                    <option value="de">Deutsch</option>
+                </select>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="modal" class="fixed inset-0 bg-black/50 hidden backdrop-blur-md z-50">
+        <div class="bg-white max-w-md mx-auto my-10 p-6 rounded-2xl shadow-lg relative">
+            <span id="closeModal" class="absolute right-5 top-4 text-gray-600 text-2xl cursor-pointer">&times;</span>
+            <div class="text-center mb-6">
+                <img src="hoyoverse.png" alt="HoYoverse Logo" class="h-8 mb-4">
+                <h3 class="text-gray-800 text-xl font-medium">Log In to Your Account</h3>
+            </div>
+            <div class="mb-4">
+                <input type="email" placeholder="Email Address" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-blue-500">
+            </div>
+            <div class="mb-4">
+                <input type="password" placeholder="Password" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-blue-500">
+            </div>
+            <button class="w-full px-4 py-3 bg-blue-500 text-white rounded-lg font-medium">Log In</button>
+            <div class="mt-5 text-center">
+                <p class="text-gray-600">Or login with:</p>
+                <div class="flex justify-center gap-4 mt-3">
+                    <div class="w-10 h-10 rounded-full flex items-center justify-center border border-gray-300 hover:bg-gray-100">
+                        <img src="Google-icon.webp" alt="Google" class="w-5 h-5">
+                    </div>
+                    <div class="w-10 h-10 rounded-full flex items-center justify-center border border-gray-300 hover:bg-gray-100">
+                        <img src="logo-facebookpng-32202.png" alt="Facebook" class="w-5 h-5">
+                    </div>
+                    <div class="w-10 h-10 rounded-full flex items-center justify-center border border-gray-300 hover:bg-gray-100">
+                        <img src="png-apple-logo-9708.png" alt="Apple" class="w-5 h-5">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Modal functionality
+        document.getElementById('openModal').addEventListener('click', () => {
+            document.getElementById('modal').classList.remove('hidden');
+        });
+        document.getElementById('closeModal').addEventListener('click', () => {
+            document.getElementById('modal').classList.add('hidden');
+        });
+    </script>
+</body>
+</html>
